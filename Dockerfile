@@ -15,10 +15,10 @@ RUN apt-get update && apt-get install -y \
 RUN npm install -g prettier@3.4.2
 
 # Copy requirements first to leverage Docker cache
-COPY requirements.txt .
+COPY Requirements.txt .
 
 # Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r Requirements.txt
 
 # Copy the rest of the application
 COPY . .
